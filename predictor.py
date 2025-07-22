@@ -20,9 +20,10 @@ class AnomalyDetector:
 if __name__ == "__main__":
     print("Checking for anomalies...")
     data, latest = get_data()
-    if len(data) > 0 :
+    if len(data) > 0:
         result = AnomalyDetector().check(data, latest)
-        print(" Latest:", latest)
+        print(" Latest:", latest.tolist()) 
         print("Anomaly!" if result == -1 else "Normal")
     else:
         print("Not enough data.")
+
