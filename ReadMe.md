@@ -45,7 +45,7 @@ pip install psutil scikit-learn numpy
 ## 📘 How to Run
 1. Clone the project:
    ```bash
-   git clone https://github.com/your-username/smart-rmm.git
+   git clone https://github.com/ShaikShahul93/SMART_RMM
    cd smart-rmm
 
 Run the main script:
