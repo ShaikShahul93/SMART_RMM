@@ -24,4 +24,4 @@ def fetch_metrics(limit=100):
 
 if __name__ == "__main__":
     init_db()
-    print("✅ Database ready.")
+    print("Database ready.")

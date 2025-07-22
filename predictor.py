@@ -22,7 +22,7 @@ if __name__ == "__main__":
     data, latest = get_data()
     if len(data) > 0 :
         result = AnomalyDetector().check(data, latest)
-        print("📊 Latest:", latest)
-        print("🚨 Anomaly!" if result == -1 else "✅ Normal")
+        print(" Latest:", latest)
+        print("Anomaly!" if result == -1 else "Normal")
     else:
-        print("⚠️ Not enough data.")
+        print("Not enough data.")

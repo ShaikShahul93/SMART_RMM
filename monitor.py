@@ -8,7 +8,7 @@ def collect_metrics():
         'disk': psutil.disk_usage('/').percent
     }
     insert_metric(data)
-    print("✅ Saved:", data)
+    print("Saved:", data)
 
 if __name__ == "__main__":
     collect_metrics()

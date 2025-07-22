@@ -5,26 +5,26 @@ from auto_heal import heal
 from database import init_db
 
 def rmm():
-    print("\n🔄 Running RMM...\n")
+    print("\n Running RMM...\n")
     collect_metrics()
 
     data, latest = get_data()
     if len(data) < 10:
-        print("⚠️ Not enough data. Waiting...")
+        print("Not enough data. Waiting...")
         return
 
     detector = AnomalyDetector()
     result = detector.check(data, latest)
 
-    print("📊 Latest:", latest)
+    print("Latest:", latest)
     if result == -1:
-        print("🚨 Anomaly! Healing...")
+        print("Anomaly! Healing...")
         heal()
     else:
-        print("✅ System OK.")
+        print("System OK.")
 
 if __name__ == "__main__":
-    print("🚀 Smart RMM Starting...")
+    print("Smart RMM Starting...")
     init_db()
 
     try:
@@ -32,4 +32,4 @@ if __name__ == "__main__":
             rmm()
             time.sleep(10)
     except KeyboardInterrupt:
-        print("\n🛑 Stopped.")
+        print("\n Stopped.")
