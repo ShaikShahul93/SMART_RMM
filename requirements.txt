@@ -1,0 +1,4 @@
+# requirements.txt
+psutil
+Numpy
+scikit-learn
